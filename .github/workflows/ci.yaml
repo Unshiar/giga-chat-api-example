@@ -1,0 +1,29 @@
+name: Rust CI
+
+on: push
+
+jobs:
+  fmt_and_clippy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+
+      - name: fmt
+        run: cargo fmt --check
+
+      - name: clippy app
+        run: cargo clippy -- -D warnings
+
+      - name: clippy reqwest_example
+        run: cargo clippy --example reqwest_example -- -D warnings
+
+      - name: clippy ureq_example
+        run: cargo clippy --example ureq_example -- -D warnings
