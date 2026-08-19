@@ -11,8 +11,8 @@ Each example is a separate binary demonstrating how to:
 
 ### 1. Clone the repository
 ```bash
-git clone git@github.com:Unshiar/giga-chat-api.git
-cd giga-chat-api
+git clone git@github.com:Unshiar/giga-chat-api-example.git
+cd giga-chat-api-example
 ```
 
 ### 2. Get your GigaChat Authorization Key
