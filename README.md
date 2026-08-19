@@ -43,6 +43,94 @@ cargo run --example reqwest_example
 cargo run --example ureq_example
 ```
 
+For both examples, the output will be similar to the following:
+```
+Your access token:
+{
+  "access_token": "<token>",
+  "expires_at": 1787151058823
+}
+
+List of models:
+{
+  "data": [
+    {
+      "id": "GigaChat-2",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "chat"
+    },
+    {
+      "id": "GigaChat-2-Max",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "chat"
+    },
+    {
+      "id": "GigaChat-2-Pro",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "chat"
+    },
+    {
+      "id": "GigaChat-3-Ultra",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "chat"
+    },
+    {
+      "id": "Embeddings",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "embedder"
+    },
+    {
+      "id": "Embeddings-2",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "embedder"
+    },
+    {
+      "id": "EmbeddingsGigaR",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "embedder"
+    },
+    {
+      "id": "GigaEmbeddings-3B-2025-09",
+      "object": "model",
+      "owned_by": "salutedevices",
+      "type": "embedder"
+    }
+  ],
+  "object": "list"
+}
+
+Answer from AI:
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Hello! I'm doing great, thanks for asking. Ready for an interesting conversation or a challenge? What brings you here today?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1787149260,
+  "model": "GigaChat-2:2.0.30.01",
+  "object": "chat.completions",
+  "usage": {
+    "completion_tokens": 27,
+    "precached_prompt_tokens": 0,
+    "prompt_tokens": 29,
+    "total_tokens": 56
+  }
+}
+```
+
+
 ## Project Structure
 
 - `examples/reqwest_example.rs` - Example using the `reqwest` blocking client
